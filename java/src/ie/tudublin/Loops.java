@@ -86,6 +86,22 @@ public class Loops extends PApplet
                 	break;
 					
 				}
+				case 3:
+				{
+					float w = 200;
+					float h = 50;
+					rectMode(CENTER);
+					if (mouseX > cx - (w/2) && mouseX < cx + (w/2) && mouseY > cy - (h/2) && mouseY <cy + (h/2))
+					{
+						fill(50, 255, 255);
+					}
+					else{
+						fill (0, 255, 234);
+					}
+					rect(cx, cy, w, h);
+					break;
+				}
+				
 		}
 	}
 }
