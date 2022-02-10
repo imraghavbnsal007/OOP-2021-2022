@@ -17,6 +17,15 @@ public class Loops extends PApplet
 	float cx;
 	float cy;
 
+	float magicmap(float a, float b, float c, float d, float e)
+	{
+		float r1= c-b;
+		float r2 = e-d;
+		float howFar = a-b;
+
+		return d + ((howFar/r1) * r2);
+	}
+
 
 	public void setup() {
 		colorMode(HSB);
@@ -74,13 +83,13 @@ public class Loops extends PApplet
 				break;
 				case 2:
 				{
-					// int numRects = (int)(mouseX / 10.0f);
-					int numRects = 10;
-                	float w = width / (float) numRects;
-                	float cgap = 255 / (float) numRects;
-                	for(int i = 0 ; i < numRects ; i ++)
+					int bar = (int)(mouseX / 10.0f);
+					// int bar = 10;
+                	float w = width / (float) bar;
+                	float colorgap = 255 / (float) bar;
+                	for(int i = 0 ; i < bar ; i ++)
                 	{
-                    	fill(i * cgap, 255, 255);
+                    	fill(i * colorgap, 255, 255);
                     	rect(i * w, 0, w, height);
                 	}
                 	break;
@@ -101,6 +110,20 @@ public class Loops extends PApplet
 					rect(cx, cy, w, h);
 					break;
 				}
+				case 4:
+				{
+					int bar = 10;
+                	float w = width / (float) bar;
+                
+                	for(int i = 0 ; i < bar ; i ++)
+                	{
+                    	noStroke();
+						fill(map(i, 0, 10, 0, 255), 255 , 255);
+						rect(map(i, 0, 10, 0, 500), 0, w, height);
+					}
+                	break;
+				}
+
 				
 		}
 	}
