@@ -67,7 +67,7 @@ public class HelloProcessing extends PApplet
 	background(255, 0, 0); //greyscale
 	// line (10, 10, 200, 200); //x1, y1, x2, y2
 	fill(225,225,51);
-	circle (450, 450, 7   00); //cx, cy, r
+	circle (450, 450, 700); //cx, cy, r
 	noFill();
 
 	// ellipse(50, 200, 90, 200); //cx, cy, width, height
