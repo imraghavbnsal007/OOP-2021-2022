@@ -125,8 +125,8 @@ public class Loops extends PApplet {
 			
 			case 7:
             {
-                // int sides = (mouseX / 50);
-				int sides = 50;
+                int sides = (mouseX / 50);
+				// int sides = 50;
                 float theta = TWO_PI / (float) sides;
                 float radius = 200;
                 stroke(255);
