@@ -85,6 +85,7 @@ public class Loops extends PApplet {
 				}
 				rect(cx, cy, w, h);
 				break;
+				//after this starting on case 8
 			}
 			case 4: {
 				int bar = 10;
@@ -110,8 +111,8 @@ public class Loops extends PApplet {
 			}
 			case 6: {
 				rectMode(CORNER);
-				// int numRects = (int) mouseX / 10;
-				int numRects = 10;
+				int numRects = (int) mouseX / 10;
+				// int numRects = 10;
 				float w = width / (float) numRects;
 				float cgap = 255 / (float) numRects;
 				for (int i = 0; i < numRects; i++) {
@@ -122,8 +123,20 @@ public class Loops extends PApplet {
 				break;
 
 			}
-			
 			case 7:
+			{
+				int numcircles = (int) mouseX /10;
+				float w = width / (float) numcircles;
+				float cgap = 255 / (float) numcircles;
+				for (int i = 0; i < numcircles; i++)
+				{
+					fill(cgap *i, 255, 255);
+					ellipse(width - ((i+1) * w), i *w, w, w);
+				}
+
+			}
+			
+			case 8:
             {
                 int sides = (mouseX / 50);
 				// int sides = 50;
@@ -138,8 +151,17 @@ public class Loops extends PApplet {
                     float y2 = cos(theta * i) * radius;
                     line(cx + x1, cy + y1, cx + x2, cy + y2);
                 }
+				break;
             }
-            break;
+			//staring for last lab from case 3 continuing
+			case 9:
+			{
+				// map(a, b, c, d, e);
+				// a= inputvalue
+				//b -c - start and end of the first range
+				//d,e 0- start and end of the range
+			}
+            
 
 		}
 	}

@@ -45,8 +45,8 @@ public class Main
     }
     public static void main(String[] args)
     {
-        // loops();
-        bugZap();
+        loops();
+        // bugZap();
 
         // Tara Misty
         // Tara Tara
