@@ -136,23 +136,23 @@ public class Loops extends PApplet {
 
 			}
 			
-			case 8:
-            {
-                int sides = (mouseX / 50);
-				// int sides = 50;
-                float theta = TWO_PI / (float) sides;
-                float radius = 200;
-                stroke(255);
-                for(int i = 1 ; i <= sides ; i ++)
-                {
-                    float x1 = sin(theta * (i - 1)) * radius;
-                    float y1 = cos(theta * (i - 1)) * radius;
-                    float x2 = sin(theta * i) * radius;
-                    float y2 = cos(theta * i) * radius;
-                    line(cx + x1, cy + y1, cx + x2, cy + y2);
-                }
-				break;
-            }
+			// case 8:
+            // {
+            //     int sides = (mouseX / 50);
+			// 	// int sides = 50;
+            //     float theta = TWO_PI / (float) sides;
+            //     float radius = 200;
+            //     stroke(255);
+            //     for(int i = 1 ; i <= sides ; i ++)
+            //     {
+            //         float x1 = sin(theta * (i - 1)) * radius;
+            //         float y1 = cos(theta * (i - 1)) * radius;
+            //         float x2 = sin(theta * i) * radius;
+            //         float y2 = cos(theta * i) * radius;
+            //         line(cx + x1, cy + y1, cx + x2, cy + y2);
+            //     }
+			// 	break;
+            // }
 			//staring for last lab from case 3 continuing
 			case 9:
 			{
