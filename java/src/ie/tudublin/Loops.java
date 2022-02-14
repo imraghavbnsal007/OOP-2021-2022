@@ -73,6 +73,18 @@ public class Loops extends PApplet {
 				}
 				break;
 
+				// Code with the magicMap
+
+				// int bar = 10;
+				// float w = width / (float) bar;
+
+				// for (int i = 0; i < bar; i++) {
+				// 	noStroke();
+				// 	fill(map(i, 0, 10, 0, 255), 255, 255);
+				// 	rect(map(i, 0, 10, 0, 500), 0, w, height);
+				// }
+				// break;
+
 			}
 			case 3: {
 				float w = 200;
@@ -88,17 +100,6 @@ public class Loops extends PApplet {
 				//after this starting on case 8
 			}
 			case 4: {
-				int bar = 10;
-				float w = width / (float) bar;
-
-				for (int i = 0; i < bar; i++) {
-					noStroke();
-					fill(map(i, 0, 10, 0, 255), 255, 255);
-					rect(map(i, 0, 10, 0, 500), 0, w, height);
-				}
-				break;
-			}
-			case 5: {
 				// int numcircles = (int)(mouseX / 10.0f);
 				int numcircles = 10;
 				float w = width / (float) numcircles;
@@ -109,7 +110,7 @@ public class Loops extends PApplet {
 				}
 				break;
 			}
-			case 6: {
+			case 5: {
 				rectMode(CORNER);
 				int numRects = (int) mouseX / 10;
 				// int numRects = 10;
@@ -121,9 +122,23 @@ public class Loops extends PApplet {
 					rect(width - ((i + 1) * w), i * w, w, w);
 				}
 				break;
+				// map(a, b, c, d, e);
+				// a= inputvalue
+				//b -c - start and end of the first range
+				//d,e 0- start and end of the range
+				// int squares = (int) (mouseX/10);
+				// float w = width / (float) squares;
+				// for (int i = 0; i < squares; i++)
+				// {
+				// 	noStroke();
+				// 	fill(map(i, 0, squares, 0 , 255), 255, 255);
+				// 	float x = map(i, 0, squares, 0 , width);
+				// 	rect(x, x, w, w);
+				// 	rect((width -w ) -x , x, w, w);
+				// }
 
 			}
-			case 7:
+			case 6:
 			{
 				int numcircles = (int) mouseX /10;
 				float w = width / (float) numcircles;
@@ -133,35 +148,25 @@ public class Loops extends PApplet {
 					fill(cgap *i, 255, 255);
 					ellipse(width - ((i+1) * w), i *w, w, w);
 				}
+				break;
 
 			}
-			
-			// case 8:
-            // {
-            //     int sides = (mouseX / 50);
-			// 	// int sides = 50;
-            //     float theta = TWO_PI / (float) sides;
-            //     float radius = 200;
-            //     stroke(255);
-            //     for(int i = 1 ; i <= sides ; i ++)
-            //     {
-            //         float x1 = sin(theta * (i - 1)) * radius;
-            //         float y1 = cos(theta * (i - 1)) * radius;
-            //         float x2 = sin(theta * i) * radius;
-            //         float y2 = cos(theta * i) * radius;
-            //         line(cx + x1, cy + y1, cx + x2, cy + y2);
-            //     }
-			// 	break;
-            // }
-			//staring for last lab from case 3 continuing
-			case 9:
+			case 7:
 			{
-				// map(a, b, c, d, e);
-				// a= inputvalue
-				//b -c - start and end of the first range
-				//d,e 0- start and end of the range
+				int circles = (int) (mouseX/10);
+				float w = width / (float) circles;
+				for (int i = 0; i < circles; i++)
+				{
+					noStroke();
+					fill(map(i, 0, circles, 0 , 255), 255, 255);
+					float x = map(i, 0, circles, 0 , width);
+					ellipse(x, x, w, w);
+					ellipse((width -w )- x, x, w, w);
+				}
 			}
-            
+			
+			
+        
 
 		}
 	}
