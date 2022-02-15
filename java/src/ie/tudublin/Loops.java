@@ -62,7 +62,9 @@ public class Loops extends PApplet {
 					rect(cx, cy, cx, cy);
 				}
 				break;
-			case 2: {
+			case 2:
+			{
+				background(0);
 				int bar = (int) (mouseX / 10.0f);
 				// int bar = 10;
 				float w = width / (float) bar;
@@ -70,6 +72,7 @@ public class Loops extends PApplet {
 				for (int i = 0; i < bar; i++) {
 					fill(i * colorgap, 255, 255);
 					rect(i * w, 0, w, height);
+					// circle(width / 2, height / 2, width - map(i, 0, bar, 0, width));
 				}
 				break;
 
@@ -79,14 +82,15 @@ public class Loops extends PApplet {
 				// float w = width / (float) bar;
 
 				// for (int i = 0; i < bar; i++) {
-				// 	noStroke();
-				// 	fill(map(i, 0, 10, 0, 255), 255, 255);
-				// 	rect(map(i, 0, 10, 0, 500), 0, w, height);
+				// noStroke();
+				// fill(map(i, 0, 10, 0, 255), 255, 255);
+				// rect(map(i, 0, 10, 0, 500), 0, w, height);
 				// }
 				// break;
 
 			}
 			case 3: {
+				background(0);
 				float w = 200;
 				float h = 50;
 				rectMode(CENTER);
@@ -97,11 +101,12 @@ public class Loops extends PApplet {
 				}
 				rect(cx, cy, w, h);
 				break;
-				//after this starting on case 8
+				// after this starting on case 8
 			}
 			case 4: {
-				// int numcircles = (int)(mouseX / 10.0f);
-				int numcircles = 10;
+				background(0);
+				int numcircles = (int)(mouseX / 10.0f);
+				// int numcircles = 10;
 				float w = width / (float) numcircles;
 				float colorgap = 255 / (float) numcircles;
 				for (int i = 0; i < numcircles; i++) {
@@ -111,6 +116,7 @@ public class Loops extends PApplet {
 				break;
 			}
 			case 5: {
+				background(0);
 				rectMode(CORNER);
 				int numRects = (int) mouseX / 10;
 				// int numRects = 10;
@@ -122,51 +128,60 @@ public class Loops extends PApplet {
 					rect(width - ((i + 1) * w), i * w, w, w);
 				}
 				break;
+				// code with magic map
 				// map(a, b, c, d, e);
 				// a= inputvalue
-				//b -c - start and end of the first range
-				//d,e 0- start and end of the range
+				// b -c - start and end of the first range
+				// d,e 0- start and end of the range
 				// int squares = (int) (mouseX/10);
 				// float w = width / (float) squares;
 				// for (int i = 0; i < squares; i++)
 				// {
-				// 	noStroke();
-				// 	fill(map(i, 0, squares, 0 , 255), 255, 255);
-				// 	float x = map(i, 0, squares, 0 , width);
-				// 	rect(x, x, w, w);
-				// 	rect((width -w ) -x , x, w, w);
+				// noStroke();
+				// fill(map(i, 0, squares, 0 , 255), 255, 255);
+				// float x = map(i, 0, squares, 0 , width);
+				// rect(x, x, w, w);
+				// rect((width -w ) -x , x, w, w);
 				// }
 
 			}
-			case 6:
-			{
-				int numcircles = (int) mouseX /10;
+			case 6: {
+				background(0);
+				int numcircles = (int) mouseX / 10;
 				float w = width / (float) numcircles;
 				float cgap = 255 / (float) numcircles;
-				for (int i = 0; i < numcircles; i++)
-				{
-					fill(cgap *i, 255, 255);
-					ellipse(width - ((i+1) * w), i *w, w, w);
+				for (int i = 0; i < numcircles; i++) {
+					fill(cgap * i, 255, 255);
+					ellipse(width - ((i + 1) * w), i * w, w, w);
 				}
 				break;
 
 			}
-			case 7:
-			{
-				int circles = (int) (mouseX/10);
+			case 7: {
+				background(0);
+				int circles = (int) (mouseX / 10);
 				float w = width / (float) circles;
-				for (int i = 0; i < circles; i++)
-				{
+				for (int i = 0; i < circles; i++) {
 					noStroke();
-					fill(map(i, 0, circles, 0 , 255), 255, 255);
-					float x = map(i, 0, circles, 0 , width);
+					fill(map(i, 0, circles, 0, 255), 255, 255);
+					float x = map(i, 0, circles, 0, width);
 					ellipse(x, x, w, w);
-					ellipse((width -w )- x, x, w, w);
+					ellipse((width - w) - x, x, w, w);
 				}
 			}
-			
-			
-        
+			case 8: {
+				background(0);
+				// colorfull circles circle in circles
+				int bar = (int) (mouseX / 10.0f);
+				// int bar = 10;
+				float w = width / (float) bar;
+				float colorgap = 255 / (float) bar;
+				for (int i = 0; i < bar; i++) {
+					fill(i * colorgap, 255, 255);
+					circle(width / 2, height / 2, width - map(i, 0, bar, 0, width));
+				}
+				break;
+			}
 
 		}
 	}
