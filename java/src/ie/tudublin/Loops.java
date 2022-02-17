@@ -200,6 +200,33 @@ public class Loops extends PApplet {
 					}
 				}
 			}
+			case 10:
+			{
+				background(0);
+				colorMode(RGB);
+				float border = width * 0.1f;
+
+				for (int i = -5; i <=5; i++)
+				{
+					float x = map(i, -5, 5, border, width - border);
+					stroke (50, 250, 50);
+					line (x, border, x, height- border);
+					line(border, x,width - border, x);
+					fill(255);
+					text(i, x, border * 0.5f);
+					text(i, border * 0.5f, x);
+
+				}
+
+				break;
+			}
+			case 11:
+			{
+				background(0);
+				int slides = (int) map(mouseX, 1, width, 0, 20)
+				for (int i)
+			}
+
 
 		}
 	}
