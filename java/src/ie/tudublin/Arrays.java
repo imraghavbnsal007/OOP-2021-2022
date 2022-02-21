@@ -16,7 +16,7 @@ public class Arrays extends PApplet {
         int MIN_VALUE= 0;
     public void settings()
     {
-        size(500, 500);
+        size(1000, 500);
     }
 
     public void setup()
