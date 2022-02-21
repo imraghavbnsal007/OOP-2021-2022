@@ -1,5 +1,7 @@
 package ie.tudublin;
 
+import javax.print.attribute.standard.Sides;
+
 import processing.core.PApplet;
 
 public class Loops extends PApplet {
@@ -223,8 +225,19 @@ public class Loops extends PApplet {
 			case 11:
 			{
 				background(0);
-				int slides = (int) map(mouseX, 1, width, 0, 20)
-				for (int i)
+				stroke(255);
+				colorMode(RGB);
+				float cx = width/ 2;
+				float cy = height /2;
+				float radius= 200;
+				int slides = (int) map(mouseX, 1, width, 0, 20);
+				for (int i = 1; i < slides; i ++)
+				{
+					float theta = map(i, 0, slides, 0, TWO_PI);
+					float x = cx + sin(theta) * radius;
+					float y = cy + cos(theta)  * radius;
+					circle (x, y, 20);
+				}
 			}
 
 
