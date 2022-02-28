@@ -20,16 +20,17 @@ public class Audio1 extends PApplet {
 
     public void setup(){
         minim = new Minim(this);
-        ai = minim.getLineIn(Minim.MONO, width, 441000, 16);
+        ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         ab = ai.mix;
     }
 
     public void draw(){
         background(0);
         stroke(255);
-        for (int i = 0; i < ab.size(); i++)
+        float halfH = height /2;
+        for (int i = 0; i < ab.size(); i = i +10)
         {
-            
+            line(i, halfH, i, halfH+ ab.get(i) * halfH);
         }
     }
 

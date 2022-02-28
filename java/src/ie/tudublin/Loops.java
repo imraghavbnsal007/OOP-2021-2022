@@ -3,31 +3,23 @@ package ie.tudublin;
 import processing.core.PApplet;
 
 public class Loops extends PApplet {
-<<<<<<< HEAD
 
 	public void settings() {
 		size(500, 500);
 		cx = width / 2;
 		cy = height / 2;
 	}
-=======
->>>>>>> 917861b3aaee3e0f28dc122c1b074136723abd64
 
 	int mode = 0;
 	float cx;
 	float cy;
 
-<<<<<<< HEAD
 	float magicmap(float a, float b, float c, float d, float e) {
 		float r1 = c - b;
 		float r2 = e - d;
 		float howFar = a - b;
 
 		return d + ((howFar / r1) * r2);
-=======
-	public void settings() {
-		size(500, 500);
->>>>>>> 917861b3aaee3e0f28dc122c1b074136723abd64
 	}
 
 	public void setup() {
@@ -42,8 +34,7 @@ public class Loops extends PApplet {
 		println(mode);
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 	public void draw() {
 		background(0);
 		noStroke();

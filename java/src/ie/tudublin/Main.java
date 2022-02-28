@@ -58,13 +58,9 @@ public class Main
     }
     public static void main(String[] args)
     {
-<<<<<<< HEAD
         // loops();
         // bugZap();
-=======
-        // arrays();
->>>>>>> 403b6fb11112ea2edb4adb0a388a5a52ef91c7ab
-        Audio1;
+        Audio1();
         // Tara Misty
         // Tara Tara
         
