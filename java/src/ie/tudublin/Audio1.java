@@ -18,9 +18,19 @@ public class Audio1 extends PApplet {
         size (1024,500);
     }
 
-    public void draw(){
+    public void setup(){
         minim = new Minim(this);
         ai = minim.getLineIn(Minim.MONO, width, 441000, 16);
+        ab = ai.mix;
+    }
+
+    public void draw(){
+        background(0);
+        stroke(255);
+        for (int i = 0; i < ab.size(); i++)
+        {
+            
+        }
     }
 
     
