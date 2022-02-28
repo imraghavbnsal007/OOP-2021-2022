@@ -28,6 +28,13 @@ public class Main
         processing.core.PApplet.runSketch( a, new Arrays());
     }
 
+
+    public static void audio1()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Audio1());
+    }
+
     public void cat()
     {
         System.out.println("Hello world");
@@ -54,11 +61,15 @@ public class Main
     public static void main(String[] args)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         // loops();
         bugZap();
 =======
         arrays();
 >>>>>>> 403b6fb11112ea2edb4adb0a388a5a52ef91c7ab
+=======
+        audio1();
+>>>>>>> 5f60229c857be44e8ac8324d1d819d0eb99d5d1e
 
         // Tara Misty
         // Tara Tara
