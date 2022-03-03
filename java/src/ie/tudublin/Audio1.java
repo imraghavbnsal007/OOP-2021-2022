@@ -34,8 +34,8 @@ public class Audio1 extends PApplet {
     }
 
     public void settings() {
-        // size(1024, 500, P3D);
-        fullScreen(P3D, SPAN);
+        size(1024, 500, P3D);
+        // fullScreen();
     }
 
     public void setup() {
@@ -43,7 +43,7 @@ public class Audio1 extends PApplet {
         // Uncomment this to use the microphone
         // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         // ab = ai.mix;
-        ap = minim.loadFile("heroplanet.mp3", 1024);
+        ap = minim.loadFile("Toota-ek-Taara-Dhindora-1.mp3", 1024);
         ap.play();
         ab = ap.mix;
         colorMode(HSB);
@@ -119,6 +119,15 @@ public class Audio1 extends PApplet {
                     py = y;
                 }
             }
+            // case 3: {
+            //     background(0);
+            //     strokeWeight(2);
+            //     float r = map(smoothedAmplitude, 0, 0.5f, 50, 500);
+            //     float c = map(smoothedAmplitude, 0, 0.5f, 0, 255);
+
+            //     stroke(c, 255, 255);
+            //     circle(cx, cy, r);
+            // }
         }
 
         // Other examples we made in the class
