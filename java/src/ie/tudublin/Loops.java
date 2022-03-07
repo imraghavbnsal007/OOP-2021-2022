@@ -4,25 +4,22 @@ import processing.core.PApplet;
 
 public class Loops extends PApplet {
 
-public void settings() {
-	size(500, 500);
-	cx = width / 2;
-	cy = height / 2;
+	public void settings() {
+		size(500, 500);
+		cx = width / 2;
+		cy = height / 2;
 	}
 
 	int mode = 0;
 	float cx;
 	float cy;
 
-float magicmap(float a, float b, float c, float d, float e) {
+	float magicmap(float a, float b, float c, float d, float e) {
 		float r1 = c - b;
 		float r2 = e - d;
 		float howFar = a - b;
 
 		return d + ((howFar / r1) * r2);
-
-	public void settings() {
-		size(500, 500);
 	}
 
 	public void setup() {
@@ -125,22 +122,26 @@ float magicmap(float a, float b, float c, float d, float e) {
 				break;
 
 			}
-
-			case 7: {
-				int sides = (mouseX / 50);
+			
+			case 7:
+            {
+                int sides = (mouseX / 50);
 				// int sides = 50;
-				float theta = TWO_PI / (float) sides;
-				float radius = 200;
-				stroke(255);
-				for (int i = 1; i <= sides; i++) {
-					float x1 = sin(theta * (i - 1)) * radius;
-					float y1 = cos(theta * (i - 1)) * radius;
-					float x2 = sin(theta * i) * radius;
-					float y2 = cos(theta * i) * radius;
-					line(cx + x1, cy + y1, cx + x2, cy + y2);
-				}
-			}
-				break;
+                float theta = TWO_PI / (float) sides;
+                float radius = 200;
+                stroke(255);
+                for(int i = 1 ; i <= sides ; i ++)
+                {
+                    float x1 = sin(theta * (i - 1)) * radius;
+                    float y1 = cos(theta * (i - 1)) * radius;
+                    float x2 = sin(theta * i) * radius;
+                    float y2 = cos(theta * i) * radius;
+                    line(cx + x1, cy + y1, cx + x2, cy + y2);
+                }
+            }
+            break;
 		}
 	}
-}
+
+	
+}	
