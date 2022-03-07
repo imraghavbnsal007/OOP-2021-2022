@@ -15,6 +15,7 @@ public class Audio1 extends PApplet {
     int mode = 0;
 
     float[] lerpedBuffer;
+    float lerpedAverage = 0;
     float y = 0;
     float smoothedY = 0;
     float smoothedAmplitude = 0;
@@ -144,9 +145,33 @@ public class Audio1 extends PApplet {
                     circle(i, halfH - f, 5);
 
                 }
+                break;
             }
-                
+            case 5: {
+                for (int i = 0; i < ab.size(); i+= 10) {
 
+                    float c = map(i, 0, ab.size(), 0, 255);
+                    stroke(c, 255, 255);
+                    lerpedBuffer[i] = lerp(lerpedBuffer[i], ab.get(i), 0.1f);        
+                    line(0, i, lerpedBuffer[i] * halfH * 4, i);
+                    line(width, i, width - (lerpedBuffer[i] * halfH * 4), i);
+                    line(i, 0, i, lerpedBuffer[i] * halfH * 4);
+                    line(i, height, i, height - (lerpedBuffer[i] * halfH * 4));
+                }        
+                break;
+            }
+            case 6: {
+                 // Iterate over all the elements in the audio buffer
+                 for (int i = 0; i < ab.size(); i+=15) {
+
+                    float c = map(i, 0, ab.size(), 0, 255);
+                    stroke(c, 255, 255);
+                    lerpedBuffer[i] = lerp(lerpedBuffer[i], ab.get(i), 0.1f);
+        
+                    line(i, halfH - lerpedBuffer[i] * halfH * 4, halfH + lerpedBuffer[i] * halfH * 4, i);
+                }        
+                break;
+            }
         }
 
         // Other examples we made in the class
