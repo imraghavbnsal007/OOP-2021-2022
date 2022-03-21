@@ -6,8 +6,7 @@ import ddf.minim.AudioPlayer;
 import ddf.minim.Minim;
 import processing.core.PApplet;
 
-public class Audio2 extends PApplet
-{
+public class Audio2 extends PApplet {
     Minim minim;
     AudioPlayer ap;
     AudioInput ai;
@@ -21,10 +20,10 @@ public class Audio2 extends PApplet
     float smoothedAmplitude = 0;
 
     public void keyPressed() {
-		if (key >= '0' && key <= '9') {
-			mode = key - '0';
-		}
-		if (keyCode == ' ') {
+        if (key >= '0' && key <= '9') {
+            mode = key - '0';
+        }
+        if (keyCode == ' ') {
             if (ap.isPlaying()) {
                 ap.pause();
             } else {
@@ -32,21 +31,19 @@ public class Audio2 extends PApplet
                 ap.play();
             }
         }
-	}
-
-    public void settings()
-    {
-        size(1024, 1000, P3D);
-        //fullScreen(P3D, SPAN);
     }
 
-    public void setup()
-    {
+    public void settings() {
+        size(1024, 1000, P3D);
+        // fullScreen(P3D, SPAN);
+    }
+
+    public void setup() {
         minim = new Minim(this);
         // Uncomment this to use the microphone
         // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
-        // ab = ai.mix; 
-        ap = minim.loadFile("heroplanet.mp3", 1024);
+        // ab = ai.mix;
+        ap = minim.loadFile("BadGuy.mp3", 1024);
         ap.play();
         ab = ap.mix;
         colorMode(HSB);
@@ -126,8 +123,11 @@ public class Audio2 extends PApplet
                         px = x;
                         py = y;
                     }
+                
             }
+            break;
         case 3:
+        {
             background(0);
             strokeWeight(2);
             noFill();
@@ -135,7 +135,11 @@ public class Audio2 extends PApplet
             float c = map(smoothedAmplitude, 0, 0.5f, 0, 255);
             stroke(c, 255, 255);
             circle(cx, cy, r);
+            break;
+        }
+            
         case 4:
+        {
         
             background(0);
             strokeWeight(2);
@@ -151,6 +155,7 @@ public class Audio2 extends PApplet
                 circle(i, halfH - f, 5);                    
             }
             break;
+        }
 
         }
         
