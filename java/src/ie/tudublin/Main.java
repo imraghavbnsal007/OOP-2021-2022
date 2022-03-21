@@ -35,6 +35,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new Audio1());
     }
 
+    public static void Audio2()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Audio2());
+    }
+
     public static void Life()
 	{
 		String[] a = {"MAIN"};
@@ -74,7 +80,8 @@ public class Main
     {
         // Audio1();
         // Life();
-        ColorfulLife();
+        // ColorfulLife();
+        Audio2();
 
         // Tara Misty
         // Tara Tara
