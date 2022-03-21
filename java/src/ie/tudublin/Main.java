@@ -41,6 +41,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new Life());
     }
 
+    public static void ColorfulLife()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new ColorfulLife());
+    }
+
     public void cat()
     {
         System.out.println("Hello world");
@@ -67,7 +73,8 @@ public class Main
     public static void main(String[] args)
     {
         // Audio1();
-        Life();
+        // Life();
+        ColorfulLife();
 
         // Tara Misty
         // Tara Tara
