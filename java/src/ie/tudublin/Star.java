@@ -3,12 +3,20 @@ package ie.tudublin;
 import processing.core.PApplet;
 import processing.data.TableRow;
 
-public class Star {
+public class Star extends PApplet{
     private boolean hab;
     private String displayName;
     private float distance;
     private float xG, yG, zG;
     private float absMag;
+
+    
+
+    @Override
+    public String toString() {
+        return "Star [absMag=" + absMag + ", displayName=" + displayName + ", distance=" + distance + ", hab=" + hab
+                + ", xG=" + xG + ", yG=" + yG + ", zG=" + zG + "]";
+    }
 
     public Star(TableRow tr)
     {

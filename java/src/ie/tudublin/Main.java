@@ -75,6 +75,7 @@ public class Main
         // Audio1();
         // life();
         StarMap();
+        // loops();
 
         // Tara Misty
         // Tara Tara
