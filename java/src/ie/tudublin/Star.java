@@ -10,7 +10,22 @@ public class Star extends PApplet{
     private float xG, yG, zG;
     private float absMag;
 
-    
+    public void render(PApplet pa)
+    {
+        float border = pa.width * 0.1f;
+        float x = PApplet.map(xG, -5, 5, border, pa.width - border);
+        float y = PApplet.map(yG, -5, 5, border, pa.width - border);
+        pa.stroke(255,255,0);
+        pa.line(x -5, y, x+5, y);
+        pa.line(x, y -5, x, y+5);
+        pa.stroke(255,0,0);
+        pa.noFill();
+        pa.circle(x, y, absMag);
+        pa.fill(255);
+        pa.textAlign(PApplet.LEFT, PApplet.CENTER);
+        pa.text(displayName, x +10, y);
+
+    }
 
     @Override
     public String toString() {

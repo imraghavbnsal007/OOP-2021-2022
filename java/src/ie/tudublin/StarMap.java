@@ -16,7 +16,7 @@ public class StarMap extends PApplet {
     {
         float border = 0.1f * width;
         textAlign(CENTER, CENTER);
-        
+
         for(int i = -5; i <=5; i++)
         {
             float x = map(i, -5, 5, border, width - border);
@@ -66,11 +66,16 @@ public class StarMap extends PApplet {
 
     public void drawStars()
     {
+        for(Star s: stars)
+        {
+            s.render(this);
+        }
     }
 
     public void draw() 
     {
         background(0);
         drawGrid();
+        drawStars();
     }
 }
