@@ -40,6 +40,12 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new Audio1());
     }
+     
+    public static void StarMap()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new StarMap());
+    }
 
     public void cat()
     {
@@ -67,7 +73,8 @@ public class Main
     public static void main(String[] args)
     {
         // Audio1();
-        life();
+        // life();
+        StarMap();
 
         // Tara Misty
         // Tara Tara
