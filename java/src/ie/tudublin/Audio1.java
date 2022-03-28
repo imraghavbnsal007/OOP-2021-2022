@@ -44,7 +44,7 @@ public class Audio1 extends PApplet {
         // Uncomment this to use the microphone
         // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         // ab = ai.mix;
-        ap = minim.loadFile("BadGuy.mp3", 1024);
+        ap = minim.loadFile("Breathless-V1.0.mp3", 1024);
         ap.play();
         ab = ap.mix;
         colorMode(HSB);
