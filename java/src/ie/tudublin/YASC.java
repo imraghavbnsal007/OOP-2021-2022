@@ -2,17 +2,33 @@ package ie.tudublin;
 
 import processing.core.PApplet;
 
-public class YASC extends PApplet {
+public class YASC extends PApplet
+{
 
-    public void setup(){
+   Player p;
+   Player p1;
 
+
+    public void setup()
+    {
+        p = new Player(250, 250, 50, this);
+        p1 = new Player(50, 50, 100, this);
     }
 
-    public void settings(){
-
+    public void settings()
+    {
+        size(500,500);
     }
-    public void draw(){
+
+    public void draw()
+    {
+        background(0);
+        p.update();
+
+        p.render();
         
-    }
-    
+        p1.update();
+        p1.render();
+        
+    }    
 }
