@@ -46,6 +46,11 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new StarMap());
     }
+    public static void YASC()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new YASC());
+    }
 
     public void cat()
     {
@@ -74,7 +79,8 @@ public class Main
     {
         // Audio1();
         // life();
-        StarMap();
+        // StarMap();
+        YASC();
         // loops();
 
         // Tara Misty
