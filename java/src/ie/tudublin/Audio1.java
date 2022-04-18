@@ -35,8 +35,8 @@ public class Audio1 extends PApplet {
     }
 
     public void settings() {
-        // size(1024, 1000);
-        fullScreen(P3D, SPAN);
+        size(1024, 1000);
+        // fullScreen(P3D, SPAN);
     }
 
     public void setup() {
@@ -44,7 +44,7 @@ public class Audio1 extends PApplet {
         // Uncomment this to use the microphone
         // ai = minim.getLineIn(Minim.MONO, width, 44100, 16);
         // ab = ai.mix;
-        ap = minim.loadFile("Breathless-V1.0.mp3", 1024);
+        ap = minim.loadFile("Creed.mp3", 1024);
         ap.play();
         ab = ap.mix;
         colorMode(HSB);
@@ -148,19 +148,28 @@ public class Audio1 extends PApplet {
                 break;
             }
             case 5: {
+                background(0);
+                strokeWeight(2);
                 for (int i = 0; i < ab.size(); i+= 10) {
 
                     float c = map(i, 0, ab.size(), 0, 255);
+                    float r = map(i, 0, 0.5f, 100, 2000);
+                    float f = lerpedBuffer[i] * halfH * 4.0f;
                     stroke(c, 255, 255);
                     lerpedBuffer[i] = lerp(lerpedBuffer[i], ab.get(i), 0.1f);        
                     line(0, i, lerpedBuffer[i] * halfH * 4, i);
                     line(width, i, width - (lerpedBuffer[i] * halfH * 4), i);
                     line(i, 0, i, lerpedBuffer[i] * halfH * 4);
                     line(i, height, i, height - (lerpedBuffer[i] * halfH * 4));
+                    circle(cx, cy, r);
+                    circle(i, halfH + f, 5);
+                    circle(i, halfH - f, 5);
                 }        
                 break;
             }
             case 6: {
+                background(0);
+                strokeWeight(4);
                  // Iterate over all the elements in the audio buffer
                  for (int i = 0; i < ab.size(); i+=15) {
 
