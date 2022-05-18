@@ -58,7 +58,9 @@ public class Player
             {
                 rotation += 0.01f;
             }
+            
         }
+
         fx = YASC.sin(rotation);
         fy = - YASC.cos(rotation);
     }

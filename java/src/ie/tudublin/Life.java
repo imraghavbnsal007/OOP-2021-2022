@@ -17,9 +17,11 @@ public class Life extends PApplet {
 		colorMode(RGB);
 
 	}
-
 	
 	public void draw() {
 		board.render();
 	}
 }
+
+
+
